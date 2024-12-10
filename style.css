@@ -1,0 +1,56 @@
+* {
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+body {
+    margin: 20px;
+    padding:20px;
+}
+
+
+
+/* Parent container for both nav lists */
+.nav-container {
+    display: flex;
+    justify-content: end; /* Pushes child elements to opposite ends */
+    align-items: center; /* Vertically aligns nav items */
+    padding: 10px 5px; /* Optional: Add some padding for better spacing */
+    background-color: white; /* Optional: Background color for navigation bar */
+}
+
+/* Styles for nav-list1 */
+ul.nav-list1 {
+    list-style: none; /* Remove bullet points */
+    padding: 0;
+    margin-right: 1290px;
+    display: flex;
+}
+
+ul.nav-list2  {
+    list-style: none; /* Remove bullet points */
+    padding: 0;
+    margin: 20px;
+    display: flex;
+}
+
+ul.nav-list3 {
+    list-style: none; /* Remove bullet points */
+    padding: 0;
+    margin-left: 30px;
+    display: flex;
+}
+
+/* Link styling for both nav bars */
+.nav-container a {
+    text-decoration: none;
+    color: white;
+    padding: 5px 5px;
+    border-radius: 4px; /* Optional: Rounded corners */
+}
+
+.nav-container a:hover {
+    background-color: #e4c420; /* Optional: Add hover effect */
+}
+
+
