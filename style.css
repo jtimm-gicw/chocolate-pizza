@@ -1,131 +1,142 @@
+/* ================= GLOBAL ================= */
+
 * {
-    box-sizing: border-box;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+  box-sizing: border-box;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 body {
-    margin: 20px;
-    padding:20px;
+  margin: 0;                  /* ✅ removed duplicate body rule */
+  padding: 0;
+  background: #f4f4f4;
+}
+
+.page-wrapper {
+  width: 1200px;              /* ✅ fixed layout width */
+  margin: 0 auto;             /* ✅ centers entire site */
+  background: white;
+  padding: 20px;
 }
 
 h1 {
-    font-size: 50px;
+  font-size: 50px;
+}
+
+h3 {
+  font-size: 22px;
 }
 
 .separator {
-    width: 100%;
-    background-color: lightgray;
-    height: 8px;
+  width: 100%;
+  background-color: lightgray;
+  height: 8px;
 }
 
-/* Parent container for both nav lists */
+/* ================= NAVIGATION ================= */
+
 .nav-container {
-    display: flex;
-    justify-content: end; /* Pushes child elements to opposite ends */
-    align-items: center; /* Vertically aligns nav items */
-    padding: 10px 5px; /* Optional: Add some padding for better spacing */
-    background-color: white; /* Optional: Background color for navigation bar */
+  display: flex;
+  justify-content: space-between;   /* ✅ changed from 'end' */
+  align-items: center;
+  padding: 10px 0;
 }
 
-/* Styles for nav-list1 */
-ul.nav-list1 {
-    list-style: none; /* Remove bullet points */
-    padding: 10px;
-    margin-right: 1140px;
-    display: flex;
+/* All nav lists */
+.nav-list1,
+.nav-list2,
+.nav-list3 {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 5px;                        /* ✅ replaced margin spacing */
+  padding: 0;
+  margin: 0 0 0 20px;                        /* ✅ removed random margins */
 }
 
-ul.nav-list2  {
-    list-style: none; /* Remove bullet points */
-    padding: 0;
-    margin: 20px;
-    display: flex;
-}
-
-ul.nav-list3 {
-    list-style: none; /* Remove bullet points */
-    padding: 0;
-    margin-left: 30px;
-    display: flex;
-}
-
-/* Link styling for both nav bars */
+/* Links */
 .nav-container a {
-    text-decoration: none;
-    color: white;
-    padding: 5px 5px;
-    border-radius: 4px; /* Optional: Rounded corners */
+  text-decoration: none;
+  color: black;                     /* ✅ was white (invisible on white bg) */
+  padding: 5px;
+  border-radius: 4px;
 }
 
 .nav-container a:hover {
-    background-color: #e4c420; /* Optional: Add hover effect */
+  background-color: #e4c420;
 }
+
+/* ================= MAIN IMAGE ================= */
 
 .main-img {
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
-    margin-bottom: 20px;
-    
+  width: 100%;                      /* ✅ prevents overflow */
+  height: auto;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+  margin-bottom: 20px;
+  
 }
 
+/* ================= INGREDIENTS ================= */
+
 .ingredients {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding: 40px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
-    background-image: url("img/list-bg.png");
-    background-size: cover;        /* fills the container */
-    background-repeat: no-repeat;  /* prevents tiling */
-    background-position: center;   /* centers image */ 
-    font-size: 16px;
+  margin: 20px 0;
+  padding: 40px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+  background-image: url("img/list-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-size: 16px;
+}
+
+.ingredients ul {
+  column-count: 2;
+  column-gap: 40px;
+  list-style-type: circle;
+  padding-left: 20px;
 }
 
 .ingredients li {
   margin-bottom: 8px;
 }
 
-.ingredients ul {
-  column-count: 2;
-  column-gap: 40px; /* space between columns */
-  list-style-type: circle;
-  padding-left: 20px;
-}
+/* ================= AUTHOR SECTION ================= */
 
 .author {
-    display: flex;
-    justify-content: end; /* Pushes child elements to opposite ends */
-    align-items: center; /* Vertically aligns nav items */
-    padding: 10px 5px; /* Optional: Add some padding for better spacing */
-    background-color: white; /* Optional: Background color for navigation bar */
+  display: flex;
+  justify-content: space-between;   /* ✅ changed from 'end' */
+  align-items: center;
+  padding: 20px 0;
 }
 
 .author-info {
-    margin-right: 1220px;
-    padding-left: 30px;
-    
+  flex: 1;                          /* ✅ allows natural spacing */
+  padding: 0 30px;
 }
+
+/* ================= BUTTON ================= */
 
 button {
-    width: 300px;
-    height: 50px;
-    color: white;
-    background-color: lightsalmon;
+  width: 300px;
+  height: 50px;
+  color: white;
+  background-color: lightsalmon;
+  border: none;                     /* ✅ cleaner look */
+  cursor: pointer;
 }
 
+/* ================= FOOTER ================= */
+
 footer {
-    text-align: center;
-    font-weight: bold;
+  text-align: center;
+  font-weight: bold;
+  padding: 20px 0;
 }
 
 .small-logo {
-    justify-content: center;
-    margin-top: 25px;
+  display: block;                   /* ✅ needed for margin auto */
+  margin: 25px auto 0 auto;         /* ✅ properly centers image */
 }
 
 .fancy {
-    font-family: 'Dancing Script', cursive;
+  font-family: 'Dancing Script', cursive;
 }
-
-h3 {
-    font-size: 22px;
-}
-
